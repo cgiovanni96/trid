@@ -1,9 +1,10 @@
-import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
     <main>
-      <h1>Trid</h1>
+      <UserButton afterSignOutUrl="/" />
+      Trid
     </main>
   );
 }
