@@ -1,6 +1,6 @@
 export { SideLinks } from "./side-links.ui";
-export * as Form from "./form";
-export { Input } from "./input";
-export { Button } from "./button";
-export { Label } from "./label";
-export { Textarea } from "./textarea";
+export * as Form from "./form.ui";
+export { Input } from "./input.ui";
+export { Button } from "./button.ui";
+export { Label } from "./label.ui";
+export { Textarea } from "./textarea.ui";

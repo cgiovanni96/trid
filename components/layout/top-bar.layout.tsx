@@ -4,7 +4,7 @@ import Link from "next/link";
 import { dark } from "@clerk/themes";
 
 import { svgDimensions } from "@/constants";
-import { SignOut } from "../auth/sign-out";
+import { SignOut } from "../auth";
 
 export const TopBar = () => {
   return (

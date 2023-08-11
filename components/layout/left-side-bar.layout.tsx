@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { SignOut } from "../auth/sign-out";
+import { SignOut } from "../auth";
 import { SideLinks } from "../ui";
 
 export const LeftSideBar = () => {
