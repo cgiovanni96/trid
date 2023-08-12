@@ -7,10 +7,12 @@ import { ChangeEvent, useState } from "react";
 
 import { IUserValidation, userValidation } from "@/lib/validations";
 import { Button, Form, Input, Textarea } from "@/components/ui";
-import { svgDimensions } from "@/constants";
+import { svgDimensions } from "@/lib/constants";
 import { isBase64Image } from "@/lib/utils";
 import { useUploadThing } from "@/lib/uploadthing";
 import { User } from "@/types";
+import { USER_ACTIONS } from "@/lib/actions";
+import { usePathname, useRouter } from "next/navigation";
 
 type Props = {
   user?: User;
@@ -19,6 +21,9 @@ type Props = {
 
 export const AccountProfile = ({ user, btnTitle }: Props) => {
   const [files, setFiles] = useState<File[]>([]);
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   const { startUpload } = useUploadThing("media");
 
@@ -64,7 +69,15 @@ export const AccountProfile = ({ user, btnTitle }: Props) => {
       }
     }
 
-    // TODO: Update user profile
+    await USER_ACTIONS.updateUser(user!.id, {
+      username: values.username,
+      name: values.name,
+      image: values.profile_photo,
+      bio: values.bio,
+      path: pathname,
+    });
+
+    pathname === "/profile/edit" ? router.back() : router.push("/");
   };
 
   return (
