@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import { links, svgDimensions } from "@/constants";
+import { links, svgDimensions } from "@/lib/constants";
 
 export const SideLinks = () => {
   const pathName = usePathname();

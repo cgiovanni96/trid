@@ -22,8 +22,8 @@ export const links: Array<TridLink> = [
   },
   {
     imgURL: "/assets/create.svg",
-    route: "/create-thread",
-    label: "Create Thread",
+    route: "/create-trid",
+    label: "Create Trid",
   },
   {
     imgURL: "/assets/community.svg",
