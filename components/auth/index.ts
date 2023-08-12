@@ -1,1 +1,1 @@
-export { SignOut } from "./sign-out.auth";
+export { SignOut } from "./sign-out.component";

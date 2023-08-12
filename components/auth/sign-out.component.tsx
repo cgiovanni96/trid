@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SignedIn, SignOutButton } from "@clerk/nextjs";
 
-import { svgDimensions } from "@/constants";
+import { svgDimensions } from "@/lib/constants";
 
 type Props = {
   withLabel?: boolean;
