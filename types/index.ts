@@ -5,3 +5,13 @@ export type User = {
   bio: string;
   image: string;
 };
+
+export type MongooseFetchProperties = {
+  _id: string;
+  __v: number;
+};
+
+export type PagingParams = {
+  pageNumber?: number;
+  pageSize?: number;
+};
