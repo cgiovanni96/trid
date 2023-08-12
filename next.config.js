@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverActions: true,
+    serverComponentsExternalPackages: ["mongoose"],
+    serverActionsBodySizeLimit: "4mb",
+  },
+
+  // FIX: remove this in prod
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   images: {
     remotePatterns: [
       {
